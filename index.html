@@ -4,116 +4,205 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>x3ro — Video UGC AI per brand ecom</title>
+<title>x3ro — Video ads AI per ecommerce | UGC italiano + spot prodotto</title>
+<meta name="description" content="Video UGC con voce italiana nativa e spot prodotto cinematografici, generati con AI. Pronti in 24–48h a 1/5 del costo.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
 <style>
-  :root { --bg:#0b0e14; --card:#131826; --ink:#eef1f7; --mut:#8b93a7; --acc:#22d3ee; }
+  :root {
+    --paper:#F6F8FB; --card:#FFFFFF; --ink:#0B1B33; --steel:#5B6B84;
+    --cyan:#00A8CC; --cyan-deep:#007E9E; --coral:#FF5A47; --line:#E3E9F2;
+    --disp:'Unbounded',sans-serif; --body:'Space Grotesk',sans-serif;
+  }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif; -webkit-font-smoothing:antialiased; }
-  .wrap { max-width:900px; margin:0 auto; padding:48px 20px 64px; }
-  .brand { font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--acc); font-weight:700; }
-  h1 { font-size:clamp(26px,5vw,40px); line-height:1.15; margin:14px 0 10px; font-weight:800; }
-  .sub { color:var(--mut); font-size:16px; line-height:1.6; max-width:56ch; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px; margin:18px 0 8px; }
-  .sect { font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--acc); font-weight:700; margin-top:40px; }
-  .card { background:var(--card); border:1px solid #1e2638; border-radius:16px; overflow:hidden; }
-  .card video { width:100%; aspect-ratio:9/16; display:block; background:#000; }
-  .card .cap { padding:14px 16px; }
-  .cap b { font-size:15px; }
-  .cap span { display:block; color:var(--mut); font-size:13px; margin-top:3px; }
-  .feat { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
-  .chip { border:1px solid #263048; color:var(--ink); border-radius:999px; padding:7px 14px; font-size:13px; }
-  .cta { margin-top:40px; background:linear-gradient(135deg,#101625,#0d1b24); border:1px solid #1e2638; border-radius:16px; padding:24px; }
-  .cta b { font-size:17px; }
-  .cta p { color:var(--mut); font-size:14px; margin-top:6px; line-height:1.6; }
-  .agency { margin-top:40px; }
-  .agency-title { font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--mut); font-weight:700; margin-bottom:16px; }
-  .agrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
-  .acard { background:var(--card); border:1px solid #1e2638; border-radius:14px; padding:18px; }
-  .acard b { font-size:15px; }
-  .acard span { display:block; color:var(--mut); font-size:13px; line-height:1.55; margin-top:5px; }
-  .acard p { margin-top:10px; font-size:13px; line-height:1.7; }
-  .acard a { color:var(--acc); text-decoration:none; }
-  footer { margin-top:44px; color:var(--mut); font-size:13px; }
-  footer a { color:var(--acc); text-decoration:none; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--paper); color:var(--ink); font-family:var(--body); -webkit-font-smoothing:antialiased; }
+  img, video { max-width:100%; }
+  a { color:inherit; }
+
+  .wrap { max-width:1060px; margin:0 auto; padding:0 20px; }
+
+  /* nav */
+  .nav { position:sticky; top:0; z-index:50; background:#F6F8FBEE; backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+  .nav-in { display:flex; align-items:center; justify-content:space-between; height:64px; }
+  .nav img { height:44px; width:auto; }
+  .btn { display:inline-block; font-weight:700; text-decoration:none; border-radius:12px; padding:12px 22px; font-size:15px; transition:transform .15s ease, box-shadow .15s ease; }
+  .btn:hover { transform:translateY(-1px); }
+  .btn-hot { background:var(--coral); color:#fff; box-shadow:0 6px 18px #FF5A4733; }
+  .btn-ghost { border:2px solid var(--ink); color:var(--ink); }
+  .btn-sm { padding:9px 16px; font-size:14px; }
+
+  /* hero */
+  .hero { padding:72px 0 30px; text-align:left; }
+  .kicker { font-family:var(--disp); font-weight:600; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--cyan-deep); }
+  h1 { font-family:var(--disp); font-weight:800; font-size:clamp(30px,6vw,58px); line-height:1.08; margin:18px 0 20px; max-width:16ch; }
+  h1 .c { color:var(--cyan); }
+  .lede { font-size:clamp(16px,2.2vw,19px); color:var(--steel); line-height:1.65; max-width:52ch; }
+  .hero-cta { display:flex; gap:14px; margin-top:30px; flex-wrap:wrap; align-items:center; }
+  .chips { display:flex; gap:10px; margin-top:26px; flex-wrap:wrap; }
+  .chip { background:var(--card); border:1px solid var(--line); border-radius:999px; padding:8px 16px; font-size:13.5px; font-weight:500; color:var(--ink); }
+  .chip b { color:var(--cyan-deep); }
+
+  /* section heads */
+  section { padding:54px 0 8px; }
+  .sh { display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin-bottom:20px; }
+  .sh h2 { font-family:var(--disp); font-weight:600; font-size:clamp(17px,3vw,24px); }
+  .sh .hint { color:var(--steel); font-size:13px; white-space:nowrap; }
+
+  /* phone rail — signature */
+  .rail { display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x mandatory; padding:6px 4px 22px; scrollbar-width:none; }
+  .rail::-webkit-scrollbar { display:none; }
+  .ph { flex:0 0 auto; width:min(238px,64vw); scroll-snap-align:start; }
+  .ph-frame { border-radius:30px; border:1px solid var(--line); background:var(--card); padding:9px; box-shadow:0 14px 34px #0B1B330F; }
+  .ph video { width:100%; aspect-ratio:9/16; border-radius:22px; display:block; background:#0B1B33; object-fit:cover; }
+  .ph-cap { padding:11px 6px 0; }
+  .ph-cap b { font-size:14.5px; display:block; }
+  .ph-cap span { font-size:12.5px; color:var(--steel); }
+
+  /* stats band */
+  .band { background:var(--ink); border-radius:22px; color:#fff; padding:34px 30px; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:26px; margin-top:34px; }
+  .stat b { font-family:var(--disp); font-weight:800; font-size:clamp(22px,4vw,34px); color:var(--cyan); display:block; }
+  .stat span { color:#B9C4D6; font-size:14px; line-height:1.5; display:block; margin-top:6px; }
+
+  /* steps */
+  .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+  .step { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px; }
+  .step em { font-family:var(--disp); font-style:normal; font-weight:800; color:var(--cyan); font-size:13px; }
+  .step b { display:block; font-size:16.5px; margin:8px 0 6px; }
+  .step p { color:var(--steel); font-size:14px; line-height:1.6; }
+
+  /* pricing */
+  .packs { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; }
+  .pack { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:24px 22px; display:flex; flex-direction:column; }
+  .pack.feat { border:2px solid var(--cyan); position:relative; }
+  .pack.feat::before { content:"Più scelto"; position:absolute; top:-11px; left:20px; background:var(--cyan); color:#fff; font-size:11.5px; font-weight:700; padding:3px 12px; border-radius:999px; }
+  .pack h3 { font-family:var(--disp); font-weight:600; font-size:14px; letter-spacing:.06em; text-transform:uppercase; }
+  .pack .pr { font-family:var(--disp); font-weight:800; font-size:30px; margin:10px 0 2px; }
+  .pack .pr small { font-size:14px; color:var(--steel); font-weight:400; font-family:var(--body); }
+  .pack ul { list-style:none; margin:14px 0 20px; flex:1; }
+  .pack li { font-size:14px; color:var(--steel); padding:5px 0 5px 24px; position:relative; line-height:1.45; }
+  .pack li::before { content:"✓"; position:absolute; left:0; color:var(--cyan); font-weight:700; }
+  .pack .btn { text-align:center; }
+  .foundnote { margin-top:14px; font-size:13.5px; color:var(--steel); }
+  .foundnote b { color:var(--coral); }
+
+  /* proof */
+  .proof { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:24px; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+  .proof b { font-size:15.5px; }
+  .proof p { color:var(--steel); font-size:14px; line-height:1.65; margin-top:6px; }
+  .proof a { color:var(--cyan-deep); text-decoration:none; font-weight:500; }
+
+  /* final cta */
+  .final { text-align:center; padding:64px 0 26px; }
+  .final h2 { font-family:var(--disp); font-weight:800; font-size:clamp(22px,4.6vw,38px); max-width:22ch; margin:0 auto 14px; }
+  .final p { color:var(--steel); max-width:46ch; margin:0 auto 26px; line-height:1.6; }
+
+  footer { border-top:1px solid var(--line); margin-top:40px; padding:26px 0 40px; color:var(--steel); font-size:13.5px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  footer img { height:34px; }
+  footer a { color:var(--cyan-deep); text-decoration:none; }
+
+  .reveal { opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease; }
+  .reveal.in { opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity:1; transform:none; transition:none; } html { scroll-behavior:auto; } }
+  :focus-visible { outline:3px solid var(--cyan); outline-offset:2px; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="brand">x3ro Automations · Roma</div>
-  <h1>Video ads generati con AI:<br>UGC e spot prodotto.</h1>
-  <p class="sub">Creator UGC con voce italiana nativa + product cinematics da spot pubblicitario. Pronti per Meta e TikTok in 24–48h, a ~1/5 del costo tradizionale — testa 3–5 hook invece di uno solo.</p>
 
-  <div class="sect">UGC Creator Ads — voce italiana nativa</div>
-  <div class="grid">
-    <div class="card">
-      <video src="beauty.mp4" controls playsinline preload="metadata"></video>
-      <div class="cap"><b>Beauty / Skincare</b><span>Hook testimonial · 9:16</span></div>
-    </div>
-    <div class="card">
-      <video src="jewelry-ugc.mp4" controls playsinline preload="metadata"></video>
-      <div class="cap"><b>Gioielli / Gift</b><span>Hook unboxing-reaction · 9:16</span></div>
-    </div>
-    <div class="card">
-      <video src="wellness-ugc.mp4" controls playsinline preload="metadata"></video>
-      <div class="cap"><b>Wellness / Integratori</b><span>Hook risultato · 9:16</span></div>
-    </div>
-    <div class="card">
-      <video src="mature-ugc.mp4" controls playsinline preload="metadata"></video>
-      <div class="cap"><b>Skincare 50+</b><span>Hook esperienza · 9:16</span></div>
-    </div>
+<div class="nav"><div class="wrap nav-in">
+  <img src="logo.png" alt="x3ro Automations">
+  <a class="btn btn-hot btn-sm" href="https://ig.me/m/x3roautomations" rel="noopener">Parliamone →</a>
+</div></div>
+
+<header class="hero wrap">
+  <div class="kicker">x3ro Automations · Roma</div>
+  <h1>Video ads che <span class="c">vendono</span>.<br>Fatti con AI.</h1>
+  <p class="lede">UGC stile creator con <strong>voce italiana nativa</strong> e spot prodotto da pubblicità — per ecommerce che testano creatività ogni settimana. Pronti in 24–48 ore, a un quinto del costo di un creator tradizionale.</p>
+  <div class="hero-cta">
+    <a class="btn btn-hot" href="https://ig.me/m/x3roautomations" rel="noopener">Richiedi 2 esempi gratis</a>
+    <a class="btn btn-ghost" href="#ugc">Guarda i lavori ↓</a>
+  </div>
+  <div class="chips">
+    <div class="chip">⚡ Consegna <b>24–48h</b></div>
+    <div class="chip">🇮🇹 Italiano <b>madrelingua</b></div>
+    <div class="chip">📱 9:16 <b>Meta · TikTok</b></div>
+    <div class="chip">🧪 <b>3–5 hook</b> da testare</div>
+  </div>
+</header>
+
+<section id="ugc" class="wrap">
+  <div class="sh"><h2>UGC Creator Ads</h2><div class="hint">scorri →</div></div>
+  <div class="rail">
+    <div class="ph reveal"><div class="ph-frame"><video src="beauty.mp4" controls playsinline preload="metadata"></video></div><div class="ph-cap"><b>Beauty / Skincare</b><span>hook testimonial</span></div></div>
+    <div class="ph reveal"><div class="ph-frame"><video src="jewelry-ugc.mp4" controls playsinline preload="metadata"></video></div><div class="ph-cap"><b>Gioielli / Gift</b><span>hook unboxing</span></div></div>
+    <div class="ph reveal"><div class="ph-frame"><video src="wellness-ugc.mp4" controls playsinline preload="metadata"></video></div><div class="ph-cap"><b>Wellness / Integratori</b><span>hook risultato</span></div></div>
+    <div class="ph reveal"><div class="ph-frame"><video src="mature-ugc.mp4" controls playsinline preload="metadata"></video></div><div class="ph-cap"><b>Skincare 50+</b><span>hook esperienza</span></div></div>
+  </div>
+</section>
+
+<section id="prodotto" class="wrap">
+  <div class="sh"><h2>Product Cinematics</h2><div class="hint">spot senza volto · scorri →</div></div>
+  <div class="rail">
+    <div class="ph reveal"><div class="ph-frame"><video src="lipstick-prod.mp4" controls playsinline preload="metadata"></video></div><div class="ph-cap"><b>Beauty</b><span>studio colorful</span></div></div>
+    <div class="ph reveal"><div class="ph-frame"><video src="jersey-prod.mp4" controls playsinline preload="metadata"></video></div><div class="ph-cap"><b>Sportswear</b><span>concept creativo</span></div></div>
+    <div class="ph reveal"><div class="ph-frame"><video src="bottle-prod.mp4" controls playsinline preload="metadata"></video></div><div class="ph-cap"><b>Everyday</b><span>color-block</span></div></div>
+    <div class="ph reveal"><div class="ph-frame"><video src="perfume-prod.mp4" controls playsinline preload="metadata"></video></div><div class="ph-cap"><b>Profumeria</b><span>hero shot</span></div></div>
   </div>
 
-  <div class="sect">Product Cinematics — spot prodotto senza volto</div>
-  <div class="grid">
-    <div class="card">
-      <video src="perfume-prod.mp4" controls playsinline preload="metadata"></video>
-      <div class="cap"><b>Profumeria</b><span>Hero shot · fumo e seta</span></div>
-    </div>
-    <div class="card">
-      <video src="jersey-prod.mp4" controls playsinline preload="metadata"></video>
-      <div class="cap"><b>Sportswear</b><span>Creative · tessuto in aria</span></div>
-    </div>
-    <div class="card">
-      <video src="lipstick-prod.mp4" controls playsinline preload="metadata"></video>
-      <div class="cap"><b>Beauty</b><span>Colorful studio · trendy</span></div>
-    </div>
-    <div class="card">
-      <video src="bottle-prod.mp4" controls playsinline preload="metadata"></video>
-      <div class="cap"><b>Everyday / Lifestyle</b><span>Color-block · clean</span></div>
-    </div>
+  <div class="band reveal">
+    <div class="stat"><b>~1/5</b><span>del costo di un creator UGC tradizionale, a video</span></div>
+    <div class="stat"><b>24–48h</b><span>dal brief ai file pronti da caricare su Meta</span></div>
+    <div class="stat"><b>3–5 hook</b><span>varianti per ogni prodotto: trovi quella che converte</span></div>
   </div>
+</section>
 
-  <div class="feat">
-    <div class="chip">✔ Consegna 24–48h</div>
-    <div class="chip">✔ Italiano madrelingua</div>
-    <div class="chip">✔ 9:16 pronto per Meta/TikTok</div>
-    <div class="chip">✔ Hook multipli per A/B test</div>
-    <div class="chip">✔ 1 revisione inclusa</div>
+<section class="wrap">
+  <div class="sh"><h2>Come funziona</h2></div>
+  <div class="steps">
+    <div class="step reveal"><em>1</em><b>Ci mandi il prodotto</b><p>Link alla pagina prodotto, target e lingua. Due minuti, niente call obbligatorie.</p></div>
+    <div class="step reveal"><em>2</em><b>Produciamo gli hook</b><p>Script + video generati e curati uno a uno. Acconto 50%, saldo alla consegna.</p></div>
+    <div class="step reveal"><em>3</em><b>Lanci e testi</b><p>File 9:16 pronti per Meta e TikTok, diritti commerciali inclusi. 1 revisione compresa.</p></div>
   </div>
+</section>
 
-  <div class="cta">
-    <b>Pacchetti da €120 (3 video)</b>
-    <p>TEST 3 video · SCALE 10 video · retainer mensile con drop settimanali.<br>
-    Scrivici su Instagram o WhatsApp — rispondiamo in giornata.</p>
+<section id="prezzi" class="wrap">
+  <div class="sh"><h2>Pacchetti</h2><div class="hint">50% acconto · PayPal</div></div>
+  <div class="packs">
+    <div class="pack reveal"><h3>Test</h3><div class="pr">€120</div><ul><li>3 video ads</li><li>1 hook ciascuno</li><li>Consegna 24h</li></ul><a class="btn btn-ghost btn-sm" href="https://ig.me/m/x3roautomations" rel="noopener">Parti dal test</a></div>
+    <div class="pack feat reveal"><h3>Scale</h3><div class="pr">€300</div><ul><li>10 video ads</li><li>Hook e volti misti, varianti A/B</li><li>Consegna 48h</li></ul><a class="btn btn-hot btn-sm" href="https://ig.me/m/x3roautomations" rel="noopener">Scala i test</a></div>
+    <div class="pack reveal"><h3>Dominate</h3><div class="pr">€500</div><ul><li>20 video + 10 statiche</li><li>Ad copy incluso</li><li>Consegna 72h</li></ul><a class="btn btn-ghost btn-sm" href="https://ig.me/m/x3roautomations" rel="noopener">Vai pesante</a></div>
+    <div class="pack reveal"><h3>Retainer</h3><div class="pr">€400<small>/mese</small></div><ul><li>20 creatività fresche al mese</li><li>Drop settimanali</li><li>Priorità in coda</li></ul><a class="btn btn-ghost btn-sm" href="https://ig.me/m/x3roautomations" rel="noopener">Sempre fresco</a></div>
   </div>
+  <p class="foundnote"><b>Founding clients:</b> −20% ai primi 3 brand in cambio di una testimonianza.</p>
+</section>
 
-  <div class="agency">
-    <div class="agency-title">Non solo video — siamo un'agenzia vera</div>
-    <div class="agrid">
-      <div class="acard">
-        <b>Siti web su misura</b>
-        <span>Design e sviluppo per ristoranti, agenzie viaggi, e-commerce editoriali.</span>
-        <p><a href="https://tavernasevero.it" rel="noopener">tavernasevero.it</a> · <a href="https://valkomtravel.com" rel="noopener">valkomtravel.com</a> · <a href="https://bondhulounge.it" rel="noopener">bondhulounge.it</a> · <a href="https://angolorosso.com" rel="noopener">angolorosso.com</a></p>
-      </div>
-      <div class="acard">
-        <b>Gestione recensioni Google</b>
-        <span>Risposte AI in tono brand a ogni recensione, report mensili, più recensioni positive dal post-scontrino. Live con ristoranti a Roma.</span>
-        <p><a href="https://www.x3roautomations.it" rel="noopener">x3roautomations.it</a></p>
-      </div>
-    </div>
+<section class="wrap">
+  <div class="sh"><h2>Chi c'è dietro</h2></div>
+  <div class="proof reveal">
+    <div><b>Un'agenzia vera, non un bot</b><p>x3ro Automations costruisce siti e automazioni per attività reali: <a href="https://tavernasevero.it" rel="noopener">tavernasevero.it</a> · <a href="https://valkomtravel.com" rel="noopener">valkomtravel.com</a> · <a href="https://bondhulounge.it" rel="noopener">bondhulounge.it</a> · <a href="https://angolorosso.com" rel="noopener">angolorosso.com</a></p></div>
+    <div><b>Automazione in produzione</b><p>Gestione recensioni Google con AI per ristoranti a Roma: risposte in tono brand, report mensili, più recensioni dal post-scontrino. <a href="https://www.x3roautomations.it" rel="noopener">x3roautomations.it</a></p></div>
   </div>
+</section>
 
-  <footer>© x3ro Automations — <a href="https://www.x3roautomations.it" rel="noopener">x3roautomations.it</a> · Roma</footer>
-</div>
+<section class="final wrap">
+  <h2>Il prossimo hook vincente costa <span style="color:var(--cyan)">meno di una pizza a testa</span>.</h2>
+  <p>Mandaci il link del tuo prodotto: ti rispondiamo in giornata con 2 esempi fatti per un prodotto come il tuo. Gratis, senza impegno.</p>
+  <a class="btn btn-hot" href="https://ig.me/m/x3roautomations" rel="noopener">Scrivici ora →</a>
+</section>
+
+<footer class="wrap">
+  <img src="logo.png" alt="x3ro">
+  <span>© x3ro Automations, Roma — <a href="https://www.x3roautomations.it" rel="noopener">x3roautomations.it</a> · IG <a href="https://instagram.com/x3roautomations" rel="noopener">@x3roautomations</a></span>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold:.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // pause other videos when one plays
+  document.querySelectorAll('video').forEach(v => v.addEventListener('play', () =>
+    document.querySelectorAll('video').forEach(o => { if (o !== v) o.pause(); })));
+</script>
 </body>
 </html>
