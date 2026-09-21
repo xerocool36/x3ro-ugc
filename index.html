@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>x3ro — Video ads AI per ecommerce | UGC italiano + spot prodotto</title>
-<meta name="description" content="Video UGC con voce italiana nativa e spot prodotto cinematografici, generati con AI. Pronti in 24–48h a 1/5 del costo.">
+<meta name="description" content="Video UGC con voce italiana nativa, spot prodotto e foto per il feed, generati con AI sul tuo prodotto vero. Pronti in 24–48h.">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,20 +73,11 @@
   .step b { display:block; font-size:16.5px; margin:8px 0 6px; }
   .step p { color:var(--steel); font-size:14px; line-height:1.6; }
 
-  /* pricing */
-  .packs { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; }
-  .pack { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:24px 22px; display:flex; flex-direction:column; }
-  .pack.feat { border:2px solid var(--cyan); position:relative; }
-  .pack.feat::before { content:"Più scelto"; position:absolute; top:-11px; left:20px; background:var(--cyan); color:#fff; font-size:11.5px; font-weight:700; padding:3px 12px; border-radius:999px; }
-  .pack h3 { font-family:var(--disp); font-weight:600; font-size:14px; letter-spacing:.06em; text-transform:uppercase; }
-  .pack .pr { font-family:var(--disp); font-weight:800; font-size:30px; margin:10px 0 2px; }
-  .pack .pr small { font-size:14px; color:var(--steel); font-weight:400; font-family:var(--body); }
-  .pack ul { list-style:none; margin:14px 0 20px; flex:1; }
-  .pack li { font-size:14px; color:var(--steel); padding:5px 0 5px 24px; position:relative; line-height:1.45; }
-  .pack li::before { content:"✓"; position:absolute; left:0; color:var(--cyan); font-weight:700; }
-  .pack .btn { text-align:center; }
-  .foundnote { margin-top:14px; font-size:13.5px; color:var(--steel); }
-  .foundnote b { color:var(--coral); }
+  /* feed photos */
+  .shots { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:16px; }
+  .shot img { width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; border-radius:14px; border:1px solid var(--line); display:block; background:var(--card); }
+  .shot figcaption { font-size:13px; color:var(--steel); padding:8px 4px 0; }
+  .spec { margin-top:16px; font-size:13.5px; color:var(--steel); line-height:1.55; max-width:62ch; }
 
   /* proof */
   .proof { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:24px; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
@@ -119,10 +110,10 @@
 <header class="hero wrap">
   <div class="kicker">x3ro Automations · Roma</div>
   <h1>Video ads che <span class="c">vendono</span>.<br>Fatti con AI.</h1>
-  <p class="lede">UGC con <strong>voce italiana nativa</strong> + spot prodotto cinematografici. Pronti in 24–48 ore, a 1/5 del costo di un creator.</p>
+  <p class="lede">UGC con <strong>voce italiana nativa</strong>, spot prodotto e foto per il feed, fatti sul tuo prodotto vero. Pronti in 24–48 ore.</p>
   <div class="hero-cta">
     <a class="btn btn-hot" href="https://www.instagram.com/x3roautomations/" rel="noopener">Richiedi 2 esempi gratis</a>
-    <a class="btn btn-ghost" href="#ugc">Guarda i lavori ↓</a>
+    <a class="btn btn-ghost" href="#nuovi">Guarda i lavori ↓</a>
   </div>
   <div class="chips">
     <div class="chip">⚡ Consegna <b>24–48h</b></div>
@@ -131,6 +122,31 @@
     <div class="chip">🧪 <b>3–5 hook</b> da testare</div>
   </div>
 </header>
+
+<section id="nuovi" class="wrap">
+  <div class="sh"><h2>Ultime ads, su prodotti veri</h2><div class="hint">scorri →</div></div>
+  <div class="rail">
+    <div class="ph reveal"><div class="ph-frame"><video src="ads/hobe-pergh.mp4" poster="ads/hobe-pergh-poster.jpg" controls playsinline preload="none"></video></div><div class="ph-cap"><b>Skincare · doccia</b><span>UGC selfie, voce italiana</span></div></div>
+    <div class="ph reveal"><div class="ph-frame"><video src="ads/la-selva-positano.mp4" poster="ads/la-selva-positano-poster.jpg" controls playsinline preload="none"></video></div><div class="ph-cap"><b>Skincare · crema viso</b><span>UGC routine del mattino</span></div></div>
+    <div class="ph reveal"><div class="ph-frame"><video src="ads/volchem.mp4" poster="ads/volchem-poster.jpg" controls playsinline preload="none"></video></div><div class="ph-cap"><b>Integratori · proteine</b><span>UGC in palestra</span></div></div>
+    <div class="ph reveal"><div class="ph-frame"><video src="ads/pasta-zaccagni.mp4" poster="ads/pasta-zaccagni-poster.jpg" controls playsinline preload="none"></video></div><div class="ph-cap"><b>Food · pasta</b><span>spot prodotto, suono reale</span></div></div>
+    <div class="ph reveal"><div class="ph-frame"><video src="ads/firstmate-italia.mp4" poster="ads/firstmate-italia-poster.jpg" controls playsinline preload="none"></video></div><div class="ph-cap"><b>Pet food</b><span>UGC girato dal cliente</span></div></div>
+    <div class="ph reveal"><div class="ph-frame"><video src="ads/bonjour.mp4" poster="ads/bonjour-poster.jpg" controls playsinline preload="none"></video></div><div class="ph-cap"><b>Bevande funzionali</b><span>UGC con voce italiana</span></div></div>
+  </div>
+</section>
+
+<section id="foto" class="wrap">
+  <div class="sh"><h2>Foto per il feed</h2><div class="hint">4:5 · Instagram e Facebook</div></div>
+  <div class="shots">
+    <figure class="shot reveal"><img src="ads/hobe-pergh.jpg" alt="Foto ad 4:5: bagno doccia al limone" width="1080" height="1350" loading="lazy"><figcaption>Skincare · doccia</figcaption></figure>
+    <figure class="shot reveal"><img src="ads/la-selva-positano.jpg" alt="Foto ad 4:5: crema viso ai fiori d'arancio" width="1080" height="1350" loading="lazy"><figcaption>Skincare · crema viso</figcaption></figure>
+    <figure class="shot reveal"><img src="ads/volchem.jpg" alt="Foto ad 4:5: proteine whey al cacao" width="1080" height="1350" loading="lazy"><figcaption>Integratori · proteine</figcaption></figure>
+    <figure class="shot reveal"><img src="ads/pasta-zaccagni.jpg" alt="Foto ad 4:5: pasta trafilata al bronzo" width="1080" height="1350" loading="lazy"><figcaption>Food · pasta</figcaption></figure>
+    <figure class="shot reveal"><img src="ads/firstmate-italia.jpg" alt="Foto ad 4:5: crocchette per gatti" width="1080" height="1350" loading="lazy"><figcaption>Pet food</figcaption></figure>
+    <figure class="shot reveal"><img src="ads/bonjour.jpg" alt="Foto ad 4:5: bevanda funzionale in polvere" width="1080" height="1350" loading="lazy"><figcaption>Bevande funzionali</figcaption></figure>
+  </div>
+  <p class="spec">Queste ads sono prove fatte da noi su prodotti reali in commercio, per mostrare il risultato. Non sono lavori commissionati dai brand.</p>
+</section>
 
 <section id="ugc" class="wrap">
   <div class="sh"><h2>UGC Creator Ads</h2><div class="hint">scorri →</div></div>
@@ -153,7 +169,7 @@
   </div>
 
   <div class="band reveal">
-    <div class="stat"><b>~1/5</b><span>del costo di un creator UGC tradizionale, a video</span></div>
+    <div class="stat"><b>Claim UE</b><span>testi controllati sui claim consentiti per cosmetici, integratori e food</span></div>
     <div class="stat"><b>24–48h</b><span>dal brief ai file pronti da caricare su Meta</span></div>
     <div class="stat"><b>3–5 hook</b><span>varianti per ogni prodotto: trovi quella che converte</span></div>
   </div>
@@ -163,20 +179,9 @@
   <div class="sh"><h2>Come funziona</h2></div>
   <div class="steps">
     <div class="step reveal"><em>1</em><b>Ci mandi il prodotto</b><p>Link alla pagina prodotto, target e lingua. Due minuti, niente call obbligatorie.</p></div>
-    <div class="step reveal"><em>2</em><b>Produciamo gli hook</b><p>Script + video generati e curati uno a uno. Acconto 50%, saldo alla consegna.</p></div>
+    <div class="step reveal"><em>2</em><b>Produciamo gli hook</b><p>Script, video e foto generati e curati uno a uno, sul tuo prodotto vero.</p></div>
     <div class="step reveal"><em>3</em><b>Lanci e testi</b><p>File 9:16 pronti per Meta e TikTok, diritti commerciali inclusi. 1 revisione compresa.</p></div>
   </div>
-</section>
-
-<section id="prezzi" class="wrap">
-  <div class="sh"><h2>Pacchetti</h2><div class="hint">50% acconto · PayPal</div></div>
-  <div class="packs">
-    <div class="pack reveal"><h3>Test</h3><div class="pr">€120</div><ul><li>3 video ads</li><li>1 hook ciascuno</li><li>Consegna 24h</li></ul><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/x3roautomations/" rel="noopener">Parti dal test</a></div>
-    <div class="pack feat reveal"><h3>Scale</h3><div class="pr">€300</div><ul><li>10 video ads</li><li>Hook e volti misti, varianti A/B</li><li>Consegna 48h</li></ul><a class="btn btn-hot btn-sm" href="https://www.instagram.com/x3roautomations/" rel="noopener">Scala i test</a></div>
-    <div class="pack reveal"><h3>Dominate</h3><div class="pr">€500</div><ul><li>20 video + 10 statiche</li><li>Ad copy incluso</li><li>Consegna 72h</li></ul><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/x3roautomations/" rel="noopener">Vai pesante</a></div>
-    <div class="pack reveal"><h3>Retainer</h3><div class="pr">€400<small>/mese</small></div><ul><li>20 creatività fresche al mese</li><li>Drop settimanali</li><li>Priorità in coda</li></ul><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/x3roautomations/" rel="noopener">Sempre fresco</a></div>
-  </div>
-  <p class="foundnote"><b>Founding clients:</b> −20% ai primi 3 brand in cambio di una testimonianza.</p>
 </section>
 
 <section class="wrap">
@@ -188,8 +193,8 @@
 </section>
 
 <section class="final wrap">
-  <h2>Il prossimo hook vincente costa <span style="color:var(--cyan)">meno di una pizza a testa</span>.</h2>
-  <p>Mandaci il link del tuo prodotto: ti rispondiamo in giornata con 2 esempi fatti per un prodotto come il tuo. Gratis, senza impegno.</p>
+  <h2>Vuoi vedere il <span style="color:var(--cyan)">tuo prodotto</span> in un'ad?</h2>
+  <p>Mandaci il link del tuo prodotto: ti rispondiamo in giornata con 2 esempi fatti sul tuo prodotto. Gratis, senza impegno.</p>
   <a class="btn btn-hot" href="https://www.instagram.com/x3roautomations/" rel="noopener">Scrivici ora →</a>
 </section>
 
